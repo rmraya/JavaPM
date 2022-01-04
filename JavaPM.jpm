@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<javapm>
+<file name="C:\Users\rmraya\workspace\JavaPM\src\com\maxprograms\javapm\javapm.properties">
+<string key="JavaPM.0" xml:space="preserve">Error deleting {0}</string></file>
+<file name="C:\Users\rmraya\workspace\JavaPM\src\com\maxprograms\javapmgui\javapmgui.properties">
+<string key="JavaPMGUI.1" xml:space="preserve">Save changes?</string>
+<string key="JavaPMGUI.5" xml:space="preserve">Language</string>
+<string key="JavaPMGUI.14" xml:space="preserve">Remove File(s) from Project</string>
+<string key="ExportDialog.3" xml:space="preserve">All Files [*.*]</string>
+<string key="JavaPMGUI.40" xml:space="preserve">Quit</string>
+<string key="ImportDialog.4" xml:space="preserve">Java Properties Files [*.properties]</string>
+<string key="ExportDialog.4" xml:space="preserve">Target Language</string>
+<string key="ExportDialog.9" xml:space="preserve">Generate XLIFF from Project</string>
+<string key="JavaPMGUI.2" xml:space="preserve">Project Files</string>
+<string key="JavaPMGUI.13" xml:space="preserve">Spanish</string>
+<string key="JavaPMGUI.24" xml:space="preserve">All Files [*.*]</string>
+<string key="JavaPMGUI.31" xml:space="preserve">&amp;File</string>
+<string key="JavaPMGUI.59" xml:space="preserve">Generate XLIFF from Project</string>
+<string key="JavaPMGUI.64" xml:space="preserve">XLIFF Files [*.xlf]</string>
+<string key="JavaPMGUI.37" xml:space="preserve">Exit	Alt + F4</string>
+<string key="ExportDialog.6" xml:space="preserve">Select a file.</string>
+<string key="JavaPMGUI.56" xml:space="preserve">All Files [*.*]</string>
+<string key="JavaPMGUI.15" xml:space="preserve">Requested changes will be effective after application restarts.</string>
+<string key="JavaPMGUI.12" xml:space="preserve">Add File to Project</string>
+<string key="JavaPMGUI.4" xml:space="preserve">New JavaPM Project</string>
+<string key="JavaPMGUI.32" xml:space="preserve">New JavaPM Project</string>
+<string key="ExportDialog.7" xml:space="preserve">Select a language.</string>
+<string key="JavaPMGUI.65" xml:space="preserve">All Files [*.*]</string>
+<string key="JavaPMGUI.52" xml:space="preserve">All Files [*.*]</string>
+<string key="ExportDialog.2" xml:space="preserve">XLIFF Files [*.xlf]</string>
+<string key="ExportDialog.8" xml:space="preserve">Cancel</string>
+<string key="JavaPMGUI.20" xml:space="preserve">Mark All Files as Translated</string>
+<string key="JavaPMGUI.66" xml:space="preserve">Generate XLIFF from Project</string>
+<string key="JavaPMGUI.18" xml:space="preserve">Import Translated Properties</string>
+<string key="JavaPMGUI.61" xml:space="preserve">Import Translations from XLIFF</string>
+<string key="ExportDialog.5" xml:space="preserve">Accept</string>
+<string key="JavaPMGUI.19" xml:space="preserve">JavaPM Help	F1</string>
+<string key="ImportDialog.0" xml:space="preserve">Translated File</string>
+<string key="ImportDialog.2" xml:space="preserve">Import Translated Properties</string>
+<string key="JavaPMGUI.33" xml:space="preserve">Open JavaPM Project</string>
+<string key="ImportDialog.5" xml:space="preserve">All Files [*.*]</string>
+<string key="JavaPMGUI.11" xml:space="preserve">View Help</string>
+<string key="JavaPMGUI.55" xml:space="preserve">JavaPM Project File [*.jpm]</string>
+<string key="JavaPMGUI.28" xml:space="preserve">All Files [*.*]</string>
+<string key="JavaPMGUI.69" xml:space="preserve">About...</string>
+<string key="JavaPMGUI.47" xml:space="preserve">Import Translated Properties</string>
+<string key="About.1" xml:space="preserve">About...</string>
+<string key="ImportDialog.12" xml:space="preserve">Cancel</string>
+<string key="JavaPMGUI.27" xml:space="preserve">Java Properties Files [*.properties]</string>
+<string key="JavaPMGUI.34" xml:space="preserve">Save JavaPM Project</string>
+<string key="JavaPMGUI.48" xml:space="preserve">Mark All Files as Translated</string>
+<string key="JavaPMGUI.3" xml:space="preserve">&amp;Options</string>
+<string key="ImportDialog.1" xml:space="preserve">Browse...</string>
+<string key="ImportDialog.6" xml:space="preserve">Translation Language</string>
+<string key="About.5" xml:space="preserve">Copyright © 2006-2009 Maxprograms</string>
+<string key="JavaPMGUI.42" xml:space="preserve">&amp;Tasks</string>
+<string key="JavaPMGUI.26" xml:space="preserve">Select a file.</string>
+<string key="JavaPMGUI.9" xml:space="preserve">Reload all properties from source code?</string>
+<string key="JavaPMGUI.41" xml:space="preserve">Quit	Ctrl + Q</string>
+<string key="ImportDialog.9" xml:space="preserve">Select a file.</string>
+<string key="JavaPMGUI.46" xml:space="preserve">Export Changed Properties</string>
+<string key="JavaPMGUI.68" xml:space="preserve">&amp;Help</string>
+<string key="ImportDialog.11" xml:space="preserve">Select a language.</string>
+<string key="JavaPMGUI.0" xml:space="preserve">JavaPM</string>
+<string key="About.3" xml:space="preserve">JavaPM {0}</string>
+<string key="JavaPMGUI.51" xml:space="preserve">JavaPM Project File [*.jpm]</string>
+<string key="JavaPMGUI.17" xml:space="preserve">Error displaying help file.</string>
+<string key="JavaPMGUI.6" xml:space="preserve">Open JavaPM Project</string>
+<string key="ExportDialog.1" xml:space="preserve">Browse...</string>
+<string key="JavaPMGUI.10" xml:space="preserve">Add Source Folder to Project</string>
+<string key="JavaPMGUI.43" xml:space="preserve">Add Source Folder to Project</string>
+<string key="JavaPMGUI.16" xml:space="preserve">Export Changed Properties</string>
+<string key="JavaPMGUI.7" xml:space="preserve">English</string>
+<string key="ExportDialog.0" xml:space="preserve">XLIFF File</string>
+<string key="ImportDialog.7" xml:space="preserve">Accept</string>
+<string key="JavaPMGUI.44" xml:space="preserve">Add File to Project</string>
+<string key="JavaPMGUI.8" xml:space="preserve">Save JavaPM Project</string>
+<string key="JavaPMGUI.45" xml:space="preserve">Remove File(s) from Project</string>
+<string key="JavaPMGUI.23" xml:space="preserve">Java Properties Files [*.properties]</string>
+<string key="JavaPMGUI.67" xml:space="preserve">Import Translations from XLIFF</string></file>
+<file name="C:\Users\rmraya\workspace\JavaPM\src\com\maxprograms\util\util.properties">
+<string key="Preferences.11" xml:space="preserve">Error creating preferences directory.</string>
+<string key="CommonFunctions.6" xml:space="preserve">Path must be absolute.</string></file>
+<file name="C:\Users\rmraya\workspace\JavaPM\src\com\maxprograms\xml\xml.properties">
+<string key="XMLOutputter.95" xml:space="preserve">A character not allowed by XML Standard was found.</string>
+<string key="Catalogue.16" xml:space="preserve">Cannot resolve ''{0}''.</string></file></javapm>
