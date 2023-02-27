@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/task.dtd">
+<task id="javapm_create_project">
+    <title>Create a Project</title>
+    <shortdesc>Steps for creating a JavaPM project and populating it with an initial set of
+        files.</shortdesc>
+    <taskbody>
+        <context/>            
+        <steps>
+            <step>
+                <cmd>In <uicontrol>File</uicontrol> menu, select <uicontrol>New Java PM
+                        Project</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Add .properties files to the project.</cmd>
+                <choices>
+                    <choice>To add all .properties files from a given source folder at once: In
+                            <uicontrol>Tasks</uicontrol> menu, select <uicontrol>Add Source Folder
+                            to Project</uicontrol>.</choice>
+                    <choice>To add individual .properties files: In <uicontrol>Tasks</uicontrol>
+                        menu select <uicontrol>Add File to Project</uicontrol>.</choice>
+                    <choice>To delete .properties files from the project: <ol>
+                            <li>Select one or more files from the file list.</li>
+                            <li>In <uicontrol>Tasks</uicontrol> menu, select <uicontrol>Remove
+                                    File(s) from Project</uicontrol>.</li>
+                        </ol>
+                    </choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>In <uicontrol>File</uicontrol> menu, select <uicontrol>Save JavaPM
+                        Project</uicontrol> to specify a file name for the JavaPM project file and
+                    save it.</cmd>
+            </step>
+
+        </steps>
+    </taskbody>
+</task>

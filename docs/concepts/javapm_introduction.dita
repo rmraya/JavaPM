@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/concept.dtd">
+<concept id="javapm_introduction">
+ <title>Introduction</title>
+ <shortdesc/>
+ <conbody>
+  <p>JavaPM is a cross-platform utility that assists software developers in the localization of
+   Java projects.</p>
+  <p>JavaPM converts Java .properties files to XLIFF 1.2 format, allowing their localization using
+   most modern translation environments. Once the XLIFF files have been translated, JavaPM inserts
+   the translations into the Java project, creating new .properties files or updating existing ones
+   as necessary.</p>
+  <p>JavaPM tracks all .properties files in a Java project. It can create full translation kits or
+   incremental ones when necessary.</p>
+  <p>All programs published by Maxprograms are localized using JavaPM and Swordfish.</p>
+ </conbody>
+</concept>

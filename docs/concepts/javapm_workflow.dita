@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/concept.dtd">
+<concept id="javapm_workflow">
+ <title>Standard Workflow</title>
+ <shortdesc/>
+    <conbody>
+        <p>Localization of a Java project normally requires the following steps:</p>
+        <ol>
+            <li>Create a JavaPM project.</li>
+            <li>Generate an XLIFF file for each target language.</li>
+            <li>Send XLIFF files to your Localization Services Provider (LSP) for translation.</li>
+            <li>Import translated XLIFF files into the JavaPM project.</li>
+            <li>Repeat these steps until your LSP says that translatios are final:
+                <ul>
+                    <li>Build a test version of your software and send it to the LSP for review.</li>
+                    <li>Import updated XLIFF files into the JavaPM project.</li>
+                </ul>
+            </li>
+        </ol>         
+    </conbody>
+</concept>

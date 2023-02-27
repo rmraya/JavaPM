@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/task.dtd">
+<task id="javapm_export_properties">
+    <title>Export Changed or New Strings</title>
+    <shortdesc>Steps for generating a translatable file from strings modified or added to the source
+        code after the project was created.</shortdesc>
+    <taskbody>
+        <context/>
+        <steps>
+            <step>
+                <cmd>In <uicontrol>File</uicontrol> menu, select <uicontrol>Open JavaPM
+                    Project</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Locate and open the JavaPM project.</cmd>
+            </step>            
+            <step>
+                <cmd>In <uicontrol>Tasks</uicontrol> menu, select <uicontrol>Export Changed Properties</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Especify a file name for the exported .properties file and save it.</cmd>
+            </step>
+        </steps>
+        <result>A .properties file containing all translatable strings modified or added to the
+            source code after the project was created is generated and saved in the selected
+            location.</result>
+    </taskbody>
+</task>

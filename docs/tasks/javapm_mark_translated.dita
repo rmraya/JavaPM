@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/task.dtd">
+<task id="javapm_mark_translated">
+    <title>Mark Files as Translated</title>
+    <shortdesc>Steps for updating a JavaPM project, incorporating all strings modified or added to
+        the source code after the project was created. Use this feature only after all XLIFF files
+        generated from the project have been translated and imported.</shortdesc>
+    <taskbody>
+        <context/>
+        <steps>
+            <step>
+                <cmd>In <uicontrol>File</uicontrol> menu, select <uicontrol>Open JavaPM
+                    Project</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Locate and open the JavaPM project to be updated.</cmd>
+            </step>            
+            <step>
+                <cmd>In <uicontrol>Tasks</uicontrol> menu, select <uicontrol>Mark All Files as Translated</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>In <uicontrol>File</uicontrol> menu, select <uicontrol>Save JavaPM
+                        Project</uicontrol> to save all changes.</cmd>
+            </step>
+        </steps>
+        <result>JavaPM reviews the .properties files listed in the project and incorporates all new
+            or changed translatable strings and their corresponding translations to the project.</result>
+    </taskbody>
+</task>

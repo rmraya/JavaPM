@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/reference.dtd">
+<reference id="javapm_file_menu">
+  <title>File Menu</title>
+  <shortdesc/>
+  <refbody>
+    <properties relcolwidth="1.0* 4.72* 17.58*">
+      <property>
+        <proptype><image href="../images/JavaPM/new.png" align="center"/></proptype>
+        <propvalue>New JavaPM Project</propvalue>
+        <propdesc>Create a new JavaPM project.</propdesc>
+      </property>
+      <property>
+        <proptype><image href="../images/JavaPM/open.png" align="center"/></proptype>
+        <propvalue>Open JavaPM Project</propvalue>
+        <propdesc>Open an existing JavaPM project.</propdesc>
+      </property>
+      <property>
+        <proptype><image href="../images/JavaPM/save.png" align="center"/></proptype>
+        <propvalue>Save JavaPM Project</propvalue>
+        <propdesc>Save all changes intoduced to current open JavaPM project.</propdesc>
+      </property>
+      <property>
+        <proptype/>
+        <propvalue>Exit/Quit</propvalue>
+        <propdesc>Close the program.</propdesc>
+      </property>
+    </properties>
+  </refbody>
+</reference>

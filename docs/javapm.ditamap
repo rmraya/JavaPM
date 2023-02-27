@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/bookmap.dtd">
+<bookmap xml:lang="en-US" product="JavaPM" toc="yes">
+    <booktitle>
+        <mainbooktitle><ph>JavaPM User Guide</ph>
+            <image href="images/JavaPM/Orange_squares.png" placement="break" scale="200"/>
+        </mainbooktitle>
+        <booktitlealt>
+            <ph>Copyright © 2006 - 2017 Maxprograms</ph>
+        </booktitlealt>
+    </booktitle>
+    <frontmatter>
+        <booklists>
+            <toc/>
+        </booklists>
+    </frontmatter>
+    <chapter>
+        <topicref navtitle="Introduction" href="concepts/javapm_introduction.dita">
+            <topicref href="concepts/supported_platforms.dita" navtitle="Supported Platforms"/>
+            <topicref href="concepts/requirements.dita" navtitle="Requirements"/>
+            <topichead navtitle="Basic Concepts">
+                <topicref navtitle="Java Properties" href="concepts/Java_Properties.dita"/>
+                <topicref navtitle="XLIFF" href="concepts/XLIFF.dita"/>
+            </topichead>
+        </topicref>
+    </chapter>
+    <chapter>
+        <topichead navtitle="User Interface">
+            <topicref href="references/javapm_main_gui.dita"/>
+            <topichead navtitle="Menus">
+                <topicref href="references/javapm_file_menu.dita"/>
+                <topicref href="references/javapm_options_menu.dita"/>
+                <topicref href="references/javapm_tasks_menu.dita"/>
+                <topicref href="references/javapm_help_menu.dita"/>
+            </topichead>
+        </topichead>
+    </chapter>
+    <chapter>
+        <topichead navtitle="Localization Workflow">
+            <topicref href="concepts/javapm_workflow.dita"/>
+            <topichead navtitle="Basic tasks">
+                <topicref href="tasks/javapm_create_project.dita"/>
+                <topicref href="tasks/javapm_generate_xliff.dita"/>
+                <topicref href="tasks/javapm_import_xliff.dita"/>
+            </topichead>
+            <topicref href="concepts/javapm_maintenance.dita"/>
+            <topichead navtitle="Maintenance Tasks">
+                <topicref href="tasks/javapm_export_properties.dita"/>
+                <topicref href="tasks/javapm_import_properties.dita"/>
+                <topicref href="tasks/javapm_mark_translated.dita"/>
+            </topichead>
+            <topicref href="concepts/javapm_translation_reuse.dita"/>
+        </topichead>
+    </chapter>
+    <backmatter>
+        <booklists>
+            <glossarylist>
+                <topicref href="glossaries/character_set.dita" type="glossentry"/>
+                <topicref href="glossaries/CAT.dita" type="glossentry"/>
+                <topicref href="glossaries/LSP.dita" type="glossentry"/>
+                <topicref href="glossaries/OASIS.dita" type="glossentry"/>
+                <topicref href="glossaries/Swordfish.dita" type="glossentry"/>
+                <topicref href="glossaries/source_language.dita" type="glossentry"/>
+                <topicref href="glossaries/target_language.dita" type="glossentry"/>
+                <topicref href="glossaries/TMX.dita" type="glossentry"/>
+                <topicref href="glossaries/translation_memory.dita" type="glossentry"/>
+                <topicref href="glossaries/XLIFF.dita" type="glossentry"/>
+            </glossarylist>
+        </booklists>
+    </backmatter>
+</bookmap>

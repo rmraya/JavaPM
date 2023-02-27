@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/reference.dtd">
+<reference id="javapm_help_menu">
+    <title>Help Menu</title>
+    <shortdesc/>
+    <refbody>
+        <properties relcolwidth="1.0* 4.72* 17.58*">
+            <property>
+                <proptype><image href="../images/JavaPM/help.png" align="center"/></proptype>                
+                <propvalue>JavaPM Help</propvalue>
+                <propdesc>Display JavaPM User Guide in the default PDF viewer.</propdesc>
+            </property>
+            <property>
+                <proptype/>
+                <propvalue>About...</propvalue>
+                <propdesc>Display a dialog with copyright and program version information.</propdesc>
+            </property>
+        </properties>
+    </refbody>
+</reference>
