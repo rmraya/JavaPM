@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 import java.nio.charset.Charset;
+import java.nio.file.Files;
 import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -181,8 +182,12 @@ public class CreateXliff {
             String original = file.getAttributeValue("original");
             String relative = Utils.getRelativePath(src, original);
             file.setAttribute("original", relative);
+            if (xliff2) {
+                file.setAttribute("id", "" + i);
+            }
             root.addContent("\n");
             root.addContent(file);
+            Files.delete(new File(xliffs.get(i)).toPath());
         }
         XMLOutputter outputter = new XMLOutputter();
         outputter.preserveSpace(true);
