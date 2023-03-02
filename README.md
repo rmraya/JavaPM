@@ -59,3 +59,5 @@ Where:
   cd JavaPM
   ant
 ```
+
+A binary distribution will be created in `/dist` folder.
