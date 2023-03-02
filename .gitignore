@@ -1,7 +1,5 @@
 .DS_Store
 /.vscode/
-/catalog/
-/srx/
 /bin/
 lib/javapm.jar
 /dist/
