@@ -10,11 +10,11 @@
 package com.maxprograms.javapm;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 import java.nio.charset.Charset;
-import java.nio.file.Files;
 import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,9 +29,12 @@ import com.maxprograms.converters.Constants;
 import com.maxprograms.converters.Convert;
 import com.maxprograms.converters.EncodingResolver;
 import com.maxprograms.converters.FileFormats;
-import com.maxprograms.converters.Join;
 import com.maxprograms.converters.Utils;
 import com.maxprograms.languages.LanguageUtils;
+import com.maxprograms.xml.Document;
+import com.maxprograms.xml.Element;
+import com.maxprograms.xml.SAXBuilder;
+import com.maxprograms.xml.XMLOutputter;
 
 public class CreateXliff {
 
@@ -147,9 +150,44 @@ public class CreateXliff {
             }
             xliffs.add(xlf);
         }
-        Join.join(xliffs, xliff);
-        for (String xlf : xliffs) {
-            Files.delete(new File(xlf).toPath());
+        join(xliffs, src, xliff, srcLang, tgtLang, xliff2);
+    }
+
+    private static void join(List<String> xliffs, String src, String xliff, String srcLang, String tgtLang,
+            boolean xliff2) throws SAXException, IOException, ParserConfigurationException {
+        Document doc = new Document(null, "xliff", null, null);
+        Element root = doc.getRootElement();
+        if (xliff2) {
+            root.setAttribute("version", "2.0");
+            root.setAttribute("srcLang", srcLang);
+            if (!tgtLang.isEmpty()) {
+                root.setAttribute("trgLang", tgtLang);
+            }
+            root.setAttribute("xmlns", "urn:oasis:names:tc:xliff:document:2.0");
+            root.setAttribute("xmlns:mtc", "urn:oasis:names:tc:xliff:matches:2.0");
+            root.setAttribute("xmlns:mda", "urn:oasis:names:tc:xliff:metadata:2.0");
+        } else {
+            root.setAttribute("version", "1.2");
+            root.setAttribute("xmlns", "urn:oasis:names:tc:xliff:document:1.2");
+            root.setAttribute("xsi:schemaLocation",
+                    "urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd");
+            root.setAttribute("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance");
+        }
+        SAXBuilder builder = new SAXBuilder();
+        for (int i = 0; i < xliffs.size(); i++) {
+            Document d = builder.build(xliffs.get(i));
+            Element r = d.getRootElement();
+            Element file = r.getChild("file");
+            String original = file.getAttributeValue("original");
+            String relative = Utils.getRelativePath(src, original);
+            file.setAttribute("original", relative);
+            root.addContent("\n");
+            root.addContent(file);
+        }
+        XMLOutputter outputter = new XMLOutputter();
+        outputter.preserveSpace(true);
+        try (FileOutputStream out = new FileOutputStream(xliff)) {
+            outputter.output(doc, out);
         }
     }
 
