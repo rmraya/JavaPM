@@ -41,7 +41,7 @@ Where:
     -xliff:     XLIFF file to merge    
 ```
 
-## Requirements
+## Build Requirements
 
 - JDK 17 or newer is required for compiling and building. Pre-built binaries already include everything you need to run all options.
 - Apache Ant 1.10.12 or newer
