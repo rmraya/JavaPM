@@ -55,7 +55,7 @@ Where:
 ### Steps for building
 
 ``` bash
-  git clone https://github.com/rmraya/OpenXLIFF.git
-  cd OpenXLIFF
+  git clone https://github.com/rmraya/JavaPM.git
+  cd JavaPM
   ant
 ```
