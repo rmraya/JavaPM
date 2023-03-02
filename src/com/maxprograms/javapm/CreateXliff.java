@@ -176,9 +176,9 @@ public class CreateXliff {
     }
 
     private static void help() {
-        String launcher = File.pathSeparatorChar == '/' ? "createxliff.sh" : "createxliff.bat";
+        String launcher = System.getProperty("file.separator").equals("/") ? "createxliff.sh" : "createxliff.bat";
         MessageFormat mf = new MessageFormat(
-                "\nUsage:\n\n    {0} [-help] -src sourceFolder -xliff xliffFile -srcLang sourceLanguage [-tgtLang targetLanguage] [-2.0]\n\nWhere:\n\n   -help:      (optional) display this help information and exit\n   -src:       source code folder\n   -xliff:     XLIFF file to generate\n   -srcLang:   source language code\n   -tgtLang:   (optional) target language code\n   -2.0:       (optional) generate XLIFF 2.0");
+                "Usage:\n\n    {0} [-help] -src sourceFolder -xliff xliffFile -srcLang sourceLanguage [-tgtLang targetLanguage] [-2.0]\n\nWhere:\n\n   -help:      (optional) display this help information and exit\n   -src:       source code folder\n   -xliff:     XLIFF file to generate\n   -srcLang:   source language code\n   -tgtLang:   (optional) target language code\n   -2.0:       (optional) generate XLIFF 2.0\n\n");
         System.out.println(mf.format(new String[] { launcher }));
     }
 }
