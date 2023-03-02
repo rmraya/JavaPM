@@ -14,6 +14,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
+import java.nio.file.Files;
 import java.text.MessageFormat;
 import java.util.List;
 
@@ -73,7 +74,7 @@ public class MergeXliff {
             throws IOException, SAXException, ParserConfigurationException {
         File srcFolder = new File(src);
         if (!srcFolder.exists()) {
-            throw new IOException("'src' folder does not exist");
+            Files.createDirectories(srcFolder.toPath());
         }
         File catalogFolder = new File("catalog");
         if (!catalogFolder.exists()) {
@@ -93,24 +94,26 @@ public class MergeXliff {
         if (!"xliff".equals(root.getName())) {
             throw new IOException("Selected file is not an XLIFF document");
         }
+        String tgtLang = "";
         if (root.getAttributeValue("version").startsWith("2.")) {
-            xliffFile = process20(xliffFile, doc);
+            tgtLang = root.getAttributeValue("trgLang");
         } else {
-            xliffFile = process12(xliffFile, doc);
+            Element file = root.getChild("file");
+            tgtLang = file.getAttributeValue("target-language");
         }
+        if (tgtLang.isEmpty()) {
+            throw new IOException("Target language not set");
+        }
+        xliffFile = processFiles(xliffFile, doc, tgtLang);
         List<String> result = Merge.merge(xliffFile.getAbsolutePath(), src, catalog.getAbsolutePath(), true);
         if (Constants.ERROR.equals(result.get(0))) {
             throw new IOException(result.get(1));
         }
     }
 
-    private static File process12(File xliffFile, Document doc) throws IOException {
+    private static File processFiles(File xliffFile, Document doc, String tgtLang) throws IOException {
         Element root = doc.getRootElement();
         List<Element> files = root.getChildren("file");
-        String tgtLang = files.get(0).getAttributeValue("target-language");
-        if (tgtLang.isEmpty()) {
-            throw new IOException("Target language not set");
-        }
         for (int i = 0; i < files.size(); i++) {
             Element file = files.get(i);
             String original = file.getAttributeValue("original");
@@ -135,13 +138,10 @@ public class MergeXliff {
         return name + "_" + tgtLang + ".properties";
     }
 
-    private static File process20(File xliffFile, Document doc) {
-        return null;
-    }
-
     private static void help() {
         String launcher = System.getProperty("file.separator").equals("/") ? "mergexliff.sh" : "mergexliff.bat";
-        MessageFormat mf = new MessageFormat("Usage:\n\n    {0} [-help] -src sourceFolder -xliff xliffFile\n\nWhere:\n\n    -help:      (optional) display this help information and exit\n    -src:       source code folder\n    -xliff:     XLIFF file to merge\n\n");
+        MessageFormat mf = new MessageFormat(
+                "Usage:\n\n    {0} [-help] -src sourceFolder -xliff xliffFile\n\nWhere:\n\n    -help:      (optional) display this help information and exit\n    -src:       source code folder\n    -xliff:     XLIFF file to merge\n\n");
         System.out.println(mf.format(new String[] { launcher }));
     }
 }
