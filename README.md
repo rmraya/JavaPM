@@ -21,6 +21,7 @@ Where:
    -src:       source code folder
    -xliff:     XLIFF file to generate
    -srcLang:   source language code
+   -enc:       (optional) character set code for .properties files; default: ISO-8859-1
    -tgtLang:   (optional) target language code
    -2.0:       (optional) generate XLIFF 2.0
 ```

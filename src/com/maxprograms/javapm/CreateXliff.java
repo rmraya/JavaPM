@@ -14,7 +14,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
-import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.text.MessageFormat;
 import java.util.ArrayList;
@@ -28,7 +27,6 @@ import org.xml.sax.SAXException;
 
 import com.maxprograms.converters.Constants;
 import com.maxprograms.converters.Convert;
-import com.maxprograms.converters.EncodingResolver;
 import com.maxprograms.converters.FileFormats;
 import com.maxprograms.converters.Utils;
 import com.maxprograms.languages.LanguageUtils;
@@ -48,6 +46,7 @@ public class CreateXliff {
         String xliff = "";
         String srcLang = "";
         String tgtLang = "";
+        String encoding = "ISO-8859-1";
         boolean xliff2 = false;
 
         for (int i = 0; i < arguments.length; i++) {
@@ -67,6 +66,9 @@ public class CreateXliff {
             }
             if (arg.equals("-xliff") && (i + 1) < arguments.length) {
                 xliff = arguments[i + 1];
+            }
+            if (arg.equals("-enc") && (i + 1) < arguments.length) {
+                encoding = arguments[i + 1];
             }
             if (arg.equals("-2.0")) {
                 xliff2 = true;
@@ -90,14 +92,14 @@ public class CreateXliff {
         }
 
         try {
-            generateXliff(srcFolder, xliff, srcLang, tgtLang, xliff2);
+            generateXliff(srcFolder, xliff, srcLang, tgtLang, encoding, xliff2);
         } catch (IOException | SAXException | ParserConfigurationException e) {
             logger.log(Level.ERROR, e.getMessage(), e);
         }
     }
 
-    private static void generateXliff(String src, String xliff, String srcLang, String tgtLang, boolean xliff2)
-            throws IOException, SAXException, ParserConfigurationException {
+    private static void generateXliff(String src, String xliff, String srcLang, String tgtLang, String encoding,
+            boolean xliff2) throws IOException, SAXException, ParserConfigurationException {
         File srcFolder = new File(src);
         if (!srcFolder.exists()) {
             throw new IOException("'src' folder does not exist");
@@ -126,7 +128,6 @@ public class CreateXliff {
         List<String> xliffs = new ArrayList<>();
         for (int i = 0; i < sourceFiles.size(); i++) {
             String source = sourceFiles.get(i);
-            Charset encoding = EncodingResolver.getEncoding(source, FileFormats.JAVA);
             System.out.println(source);
             String skl = source + ".skl";
             String xlf = source + ".xlf";
@@ -135,7 +136,7 @@ public class CreateXliff {
             params.put("xliff", xlf);
             params.put("skeleton", skl);
             params.put("format", FileFormats.JAVA);
-            params.put("srcEncoding", encoding.name());
+            params.put("srcEncoding", encoding);
             params.put("catalog", catalog.getAbsolutePath());
             params.put("paragraph", "yes");
             params.put("srxFile", srx.getAbsolutePath());
@@ -219,9 +220,9 @@ public class CreateXliff {
     }
 
     private static void help() {
-        String launcher = System.getProperty("file.separator").equals("/") ? "createxliff.sh" : "createxliff.bat";
+        String launcher = File.separatorChar == '/' ? "createxliff.sh" : "createxliff.bat";
         MessageFormat mf = new MessageFormat(
-                "Usage:\n\n    {0} [-help] -src sourceFolder -xliff xliffFile -srcLang sourceLanguage [-tgtLang targetLanguage] [-2.0]\n\nWhere:\n\n   -help:      (optional) display this help information and exit\n   -src:       source code folder\n   -xliff:     XLIFF file to generate\n   -srcLang:   source language code\n   -tgtLang:   (optional) target language code\n   -2.0:       (optional) generate XLIFF 2.0\n\n");
+                "Usage:\n\n    {0} [-help] -src sourceFolder -xliff xliffFile -srcLang sourceLanguage [-enc characterSet] [-tgtLang targetLanguage] [-2.0]\n\nWhere:\n\n   -help:      (optional) display this help information and exit\n   -src:       source code folder\n   -xliff:     XLIFF file to generate\n   -srcLang:   source language code\n   -enc:       (optional) character set code for .properties files; default: ISO-8859-1\n   -tgtLang:   (optional) target language code\n   -2.0:       (optional) generate XLIFF 2.0\n\n");
         System.out.println(mf.format(new String[] { launcher }));
     }
 }

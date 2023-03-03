@@ -139,7 +139,7 @@ public class MergeXliff {
     }
 
     private static void help() {
-        String launcher = System.getProperty("file.separator").equals("/") ? "mergexliff.sh" : "mergexliff.bat";
+        String launcher = File.separatorChar == '/' ? "mergexliff.sh" : "mergexliff.bat";
         MessageFormat mf = new MessageFormat(
                 "Usage:\n\n    {0} [-help] -src sourceFolder -xliff xliffFile\n\nWhere:\n\n    -help:      (optional) display this help information and exit\n    -src:       source code folder\n    -xliff:     XLIFF file to merge\n\n");
         System.out.println(mf.format(new String[] { launcher }));
