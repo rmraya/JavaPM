@@ -4,7 +4,15 @@
 
 ## Java Properties Manager
 
-JavaPM is a set of scripts for localizing Java projects using XLIFF as intermediate format.
+JavaPM is a set of scripts for localizing Java projects using XLIFF as an intermediate format.
+
+JavaPM scans a source folder for all Java resource bundles and converts all source .properties files into a single XLIFF file.
+
+After translating an XLIFF file created by JavaPM, import it to generate the .properties files corresponding to the target language.
+
+## Binary downloads
+
+You can download compressed binary packages for Windows, macOS and Linux from [https://maxprograms.com/products/javapm.html](https://maxprograms.com/products/javapm.html).
 
 ## Convert .properties to XLIFF
 
@@ -37,15 +45,19 @@ Usage:
 
 Where:
 
-    -help:      (optional) display this help information and exit
-    -src:       source code folder
-    -xliff:     XLIFF file to merge    
+    -help:       (optional) display this help information and exit
+    -src:        source code folder
+    -xliff:      XLIFF file to merge
+    -unapproved: (optional) accept translations from unapproved segments
+    -export:     (optional) generate TMX file from approved segments
 ```
 
 ## Build Requirements
 
-- JDK 17 or newer is required for compiling and building. Pre-built binaries already include everything you need to run all options.
-- Apache Ant 1.10.12 or newer
+- JDK 17 or newer is required for compiling and building.
+- Apache Ant 1.10.12 or newer.
+
+Pre-built binaries already include everything you need to run all options.
 
 ## Building
 

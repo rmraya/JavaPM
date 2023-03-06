@@ -79,15 +79,15 @@ public class CreateXliff {
             return;
         }
         if (srcFolder.isEmpty()) {
-            logger.log(Level.ERROR, "Missing '-src' parameter");
+            logger.log(Level.ERROR, Messages.getString("CreateXliff.0"));
             return;
         }
         if (xliff.isEmpty()) {
-            logger.log(Level.ERROR, "Missing '-xliff' parameter");
+            logger.log(Level.ERROR, Messages.getString("CreateXliff.1"));
             return;
         }
         if (srcLang.isEmpty()) {
-            logger.log(Level.ERROR, "Missing '-srcLang' parameter");
+            logger.log(Level.ERROR, Messages.getString("CreateXliff.2"));
             return;
         }
 
@@ -102,28 +102,28 @@ public class CreateXliff {
             boolean xliff2) throws IOException, SAXException, ParserConfigurationException {
         File srcFolder = new File(src);
         if (!srcFolder.exists()) {
-            throw new IOException("'src' folder does not exist");
+            throw new IOException(Messages.getString("CreateXliff.3"));
         }
         File catalogFolder = new File("catalog");
         if (!catalogFolder.exists()) {
-            throw new IOException("'catalog' folder not found");
+            throw new IOException(Messages.getString("CreateXliff.4"));
         }
         File catalog = new File(catalogFolder, "catalog.xml");
         if (!catalog.exists()) {
-            throw new IOException("Catalog file does not exist");
+            throw new IOException(Messages.getString("CreateXliff.5"));
         }
         File srxFolder = new File("srx");
         if (!srxFolder.exists()) {
-            throw new IOException("'srx' folder not found");
+            throw new IOException(Messages.getString("CreateXliff.6"));
         }
         File srx = new File(srxFolder, "default.srx");
         if (!srx.exists()) {
-            throw new IOException("SRX file does not exist");
+            throw new IOException(Messages.getString("CreateXliff.7"));
         }
         sourceFiles = new ArrayList<>();
         harvestProperties(srcFolder);
         if (sourceFiles.isEmpty()) {
-            throw new IOException("There are no '.properties' files to process");
+            throw new IOException(Messages.getString("CreateXliff.8"));
         }
         List<String> xliffs = new ArrayList<>();
         for (int i = 0; i < sourceFiles.size(); i++) {
@@ -221,8 +221,7 @@ public class CreateXliff {
 
     private static void help() {
         String launcher = File.separatorChar == '/' ? "createxliff.sh" : "createxliff.bat";
-        MessageFormat mf = new MessageFormat(
-                "Usage:\n\n    {0} [-help] -src sourceFolder -xliff xliffFile -srcLang sourceLanguage [-enc characterSet] [-tgtLang targetLanguage] [-2.0]\n\nWhere:\n\n   -help:      (optional) display this help information and exit\n   -src:       source code folder\n   -xliff:     XLIFF file to generate\n   -srcLang:   source language code\n   -enc:       (optional) character set code for .properties files; default: ISO-8859-1\n   -tgtLang:   (optional) target language code\n   -2.0:       (optional) generate XLIFF 2.0\n\n");
+        MessageFormat mf = new MessageFormat(Messages.getString("CreateXliff.9"));
         System.out.println(mf.format(new String[] { launcher }));
     }
 }
