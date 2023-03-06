@@ -114,7 +114,8 @@ public class MergeXliff {
             throw new IOException(Messages.getString("MergeXliff.6"));
         }
         xliffFile = processFiles(xliffFile, doc, tgtLang);
-        List<String> result = Merge.merge(xliffFile.getAbsolutePath(), src, catalog.getAbsolutePath(), unapproved);
+        String target = getTarget(src, xliffFile.getAbsolutePath());
+        List<String> result = Merge.merge(xliffFile.getAbsolutePath(), target, catalog.getAbsolutePath(), unapproved);
         if (Constants.ERROR.equals(result.get(0))) {
             throw new IOException(result.get(1));
         }
@@ -131,6 +132,18 @@ public class MergeXliff {
             MessageFormat mf = new MessageFormat(Messages.getString("MergeXliff.7"));
             logger.log(Level.ERROR, mf.format(new String[] { result.get(1) }));
         }
+    }
+
+    private static String getTarget(String src, String xliff) throws SAXException, IOException, ParserConfigurationException {
+        SAXBuilder builder = new SAXBuilder();
+        Document doc = builder.build(xliff);
+        List<Element> files = doc.getRootElement().getChildren("file");
+        if (files.size() != 1) {
+            return src;
+        }
+        String original = files.get(0).getAttributeValue("original");
+        File target = new File(new File(src), original);
+        return target.getAbsolutePath();
     }
 
     private static File processFiles(File xliffFile, Document doc, String tgtLang) throws IOException {
