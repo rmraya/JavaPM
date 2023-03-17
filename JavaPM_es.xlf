@@ -12,9 +12,9 @@ Ck1lcmdlWGxpZmYuMz0lJSUxMyUlJQpNZXJnZVhsaWZmLjQ9JSUlMTQlJSUKTWVyZ2VYbGlmZi41
 PSUlJTE1JSUlCk1lcmdlWGxpZmYuNj0lJSUxNiUlJQpNZXJnZVhsaWZmLjc9JSUlMTclJSUKTWVy
 Z2VYbGlmZi44PSUlJTE4JSUlCk1lcmdlWGxpZmYuOT0lJSUxOSUlJQo=</internal-file>
       </skl>
-      <tool tool-version="3.4.0 20230306_0912" tool-id="OpenXLIFF" tool-name="OpenXLIFF Filters"/>
+      <tool tool-version="3.5.0 20230317_1252" tool-id="OpenXLIFF" tool-name="OpenXLIFF Filters"/>
     </header>
-    <?encoding ISO-8859-1?>
+    <?encoding UTF-8?>
     <body>
       <trans-unit resname="CreateXliff.0=" approved="yes" id="0" xml:space="preserve">
       <source>Missing '-src' parameter</source>
@@ -59,13 +59,13 @@ Z2VYbGlmZi44PSUlJTE4JSUlCk1lcmdlWGxpZmYuOT0lJSUxOSUlJQo=</internal-file>
 
 Where:
 
-    -help:      (optional) display this help information and exit
-    -src:       source code folder
-    -xliff:     XLIFF file to generate
-    -srcLang:   source language code
-    -enc:       (optional) character set code for .properties files; default: ISO-8859-1
-    -tgtLang:   (optional) target language code
-    -2.0:       (optional) generate XLIFF 2.0
+   -help:      (optional) display this help information and exit
+   -src:       source code folder
+   -xliff:     XLIFF file to generate
+   -srcLang:   source language code
+   -enc:       (optional) character set code for .properties files; default: ISO-8859-1
+   -tgtLang:   (optional) target language code
+   -2.0:       (optional) generate XLIFF 2.0
 
 </source>
       <target>Uso:
@@ -74,13 +74,13 @@ Where:
 
 Dónde:
 
-    -help:    (opcional) mostrar esta información de ayuda y salir
+    -help:   (opcional) mostrar esta información de ayuda y salir
     -src:     carpeta de código fuente
     -xliff:   archivo XLIFF a generar
     -srcLang: código del idioma origen
-    -enc:     código de juego de caracteres (opcional) para archivos .properties; valor predeterminado: ISO-8859-1
-    -tgtLang: código de idioma de destino (opcional)
-    -2.0:     (opcional) generar XLIFF 2.0
+    -enc:     (opcional) código de juego de caracteres  para archivos .properties; valor predeterminado: ISO-8859-1
+    -tgtLang: (opcional) código de idioma de destino 
+    -2.0:    (opcional) generar XLIFF 2.0
 
 </target>
    </trans-unit>

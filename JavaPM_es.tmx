@@ -3,7 +3,7 @@
 <tmx version="1.4">
 <header 
       creationtool="OpenXLIFF" 
-      creationtoolversion="3.4.0" 
+      creationtoolversion="3.5.0" 
       srclang="en" 
       adminlang="en"  
       datatype="xml" 
@@ -12,188 +12,188 @@
 >
 </header>
 <body>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1743340679-0-48" creationdate="20230306T130742Z">
-<tuv xml:lang="en" creationdate="20230306T130742Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-1743340679-0-48" creationdate="20230317T212853Z">
+<tuv xml:lang="en" creationdate="20230317T212853Z">
 <seg>Missing '-src' parameter</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230306T130742Z">
+<tuv xml:lang="es" creationdate="20230317T212853Z">
 <seg>Falta el parámetro '-src'</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1743340679-0-49" creationdate="20230306T130742Z">
-<tuv xml:lang="en" creationdate="20230306T130742Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-1743340679-0-49" creationdate="20230317T212853Z">
+<tuv xml:lang="en" creationdate="20230317T212853Z">
 <seg>Missing '-xliff' parameter</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230306T130742Z">
+<tuv xml:lang="es" creationdate="20230317T212853Z">
 <seg>Falta el parámetro '-xliff'</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1743340679-0-50" creationdate="20230306T130742Z">
-<tuv xml:lang="en" creationdate="20230306T130742Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-1743340679-0-50" creationdate="20230317T212853Z">
+<tuv xml:lang="en" creationdate="20230317T212853Z">
 <seg>Missing '-srcLang' parameter</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230306T130742Z">
+<tuv xml:lang="es" creationdate="20230317T212853Z">
 <seg>Falta el parámetro '-srcLang'</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1743340679-0-51" creationdate="20230306T130742Z">
-<tuv xml:lang="en" creationdate="20230306T130742Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-1743340679-0-51" creationdate="20230317T212853Z">
+<tuv xml:lang="en" creationdate="20230317T212853Z">
 <seg>'src' folder does not exist</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230306T130742Z">
+<tuv xml:lang="es" creationdate="20230317T212853Z">
 <seg>La carpeta 'src' no existe</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1743340679-0-52" creationdate="20230306T130742Z">
-<tuv xml:lang="en" creationdate="20230306T130742Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-1743340679-0-52" creationdate="20230317T212853Z">
+<tuv xml:lang="en" creationdate="20230317T212853Z">
 <seg>'catalog' folder not found</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230306T130742Z">
+<tuv xml:lang="es" creationdate="20230317T212853Z">
 <seg>No se encontró la carpeta 'catalog'</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1743340679-0-53" creationdate="20230306T130742Z">
-<tuv xml:lang="en" creationdate="20230306T130742Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-1743340679-0-53" creationdate="20230317T212853Z">
+<tuv xml:lang="en" creationdate="20230317T212853Z">
 <seg>Catalog file does not exist</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230306T130742Z">
+<tuv xml:lang="es" creationdate="20230317T212853Z">
 <seg>El archivo de catálogo no existe</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1743340679-0-54" creationdate="20230306T130742Z">
-<tuv xml:lang="en" creationdate="20230306T130742Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-1743340679-0-54" creationdate="20230317T212853Z">
+<tuv xml:lang="en" creationdate="20230317T212853Z">
 <seg>'srx' folder not found</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230306T130742Z">
+<tuv xml:lang="es" creationdate="20230317T212853Z">
 <seg>No se encontró la carpeta 'srx'</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1743340679-0-55" creationdate="20230306T130742Z">
-<tuv xml:lang="en" creationdate="20230306T130742Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-1743340679-0-55" creationdate="20230317T212853Z">
+<tuv xml:lang="en" creationdate="20230317T212853Z">
 <seg>SRX file does not exist</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230306T130742Z">
+<tuv xml:lang="es" creationdate="20230317T212853Z">
 <seg>El archivo SRX no existe</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1743340679-0-56" creationdate="20230306T130742Z">
-<tuv xml:lang="en" creationdate="20230306T130742Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-1743340679-0-56" creationdate="20230317T212853Z">
+<tuv xml:lang="en" creationdate="20230317T212853Z">
 <seg>There are no '.properties' files to process</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230306T130742Z">
+<tuv xml:lang="es" creationdate="20230317T212853Z">
 <seg>No hay archivos '.properties' para procesar</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1743340679-0-57" creationdate="20230306T130742Z">
-<tuv xml:lang="en" creationdate="20230306T130742Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-1743340679-0-57" creationdate="20230317T212853Z">
+<tuv xml:lang="en" creationdate="20230317T212853Z">
 <seg>Usage:
 
     {0} [-help] -src sourceFolder -xliff xliffFile -srcLang sourceLanguage [-enc characterSet] [-tgtLang targetLanguage] [-2.0]
 
 Where:
 
-    -help:      (optional) display this help information and exit
-    -src:       source code folder
-    -xliff:     XLIFF file to generate
-    -srcLang:   source language code
-    -enc:       (optional) character set code for .properties files; default: ISO-8859-1
-    -tgtLang:   (optional) target language code
-    -2.0:       (optional) generate XLIFF 2.0
+   -help:      (optional) display this help information and exit
+   -src:       source code folder
+   -xliff:     XLIFF file to generate
+   -srcLang:   source language code
+   -enc:       (optional) character set code for .properties files; default: ISO-8859-1
+   -tgtLang:   (optional) target language code
+   -2.0:       (optional) generate XLIFF 2.0
 
 </seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230306T130742Z">
+<tuv xml:lang="es" creationdate="20230317T212853Z">
 <seg>Uso:
 
     {0} [-help] -src carpeta -xliff archivoXliff -srcLang idiomaOrigen [-enc characterSet] [-tgtLang idiomaDestino] [-2.0]
 
 Dónde:
 
-    -help:    (opcional) mostrar esta información de ayuda y salir
+    -help:   (opcional) mostrar esta información de ayuda y salir
     -src:     carpeta de código fuente
     -xliff:   archivo XLIFF a generar
     -srcLang: código del idioma origen
-    -enc:     código de juego de caracteres (opcional) para archivos .properties; valor predeterminado: ISO-8859-1
-    -tgtLang: código de idioma de destino (opcional)
-    -2.0:     (opcional) generar XLIFF 2.0
+    -enc:     (opcional) código de juego de caracteres  para archivos .properties; valor predeterminado: ISO-8859-1
+    -tgtLang: (opcional) código de idioma de destino 
+    -2.0:    (opcional) generar XLIFF 2.0
 
 </seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1743340679-0-1567" creationdate="20230306T130742Z">
-<tuv xml:lang="en" creationdate="20230306T130742Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-1743340679-0-1567" creationdate="20230317T212853Z">
+<tuv xml:lang="en" creationdate="20230317T212853Z">
 <seg>Missing '-src' parameter</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230306T130742Z">
+<tuv xml:lang="es" creationdate="20230317T212853Z">
 <seg>Falta el parámetro '-src'</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1743340679-0-1568" creationdate="20230306T130742Z">
-<tuv xml:lang="en" creationdate="20230306T130742Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-1743340679-0-1568" creationdate="20230317T212853Z">
+<tuv xml:lang="en" creationdate="20230317T212853Z">
 <seg>Missing '-xliff' parameter</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230306T130742Z">
+<tuv xml:lang="es" creationdate="20230317T212853Z">
 <seg>Falta el parámetro '-xliff'</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1743340679-0-1569" creationdate="20230306T130742Z">
-<tuv xml:lang="en" creationdate="20230306T130742Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-1743340679-0-1569" creationdate="20230317T212853Z">
+<tuv xml:lang="en" creationdate="20230317T212853Z">
 <seg>'catalog' folder not found</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230306T130742Z">
+<tuv xml:lang="es" creationdate="20230317T212853Z">
 <seg>No se encontró la carpeta 'catalog'</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1743340679-0-1570" creationdate="20230306T130742Z">
-<tuv xml:lang="en" creationdate="20230306T130742Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-1743340679-0-1570" creationdate="20230317T212853Z">
+<tuv xml:lang="en" creationdate="20230317T212853Z">
 <seg>Catalog file does not exist</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230306T130742Z">
+<tuv xml:lang="es" creationdate="20230317T212853Z">
 <seg>El archivo de catálogo no existe</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1743340679-0-1571" creationdate="20230306T130742Z">
-<tuv xml:lang="en" creationdate="20230306T130742Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-1743340679-0-1571" creationdate="20230317T212853Z">
+<tuv xml:lang="en" creationdate="20230317T212853Z">
 <seg>'xliff' file does not exist</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230306T130742Z">
+<tuv xml:lang="es" creationdate="20230317T212853Z">
 <seg>El archivo 'xliff' no existe</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1743340679-0-1572" creationdate="20230306T130742Z">
-<tuv xml:lang="en" creationdate="20230306T130742Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-1743340679-0-1572" creationdate="20230317T212853Z">
+<tuv xml:lang="en" creationdate="20230317T212853Z">
 <seg>Selected file is not an XLIFF document</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230306T130742Z">
+<tuv xml:lang="es" creationdate="20230317T212853Z">
 <seg>El archivo seleccionado no es un documento XLIFF</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1743340679-0-1573" creationdate="20230306T130742Z">
-<tuv xml:lang="en" creationdate="20230306T130742Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-1743340679-0-1573" creationdate="20230317T212853Z">
+<tuv xml:lang="en" creationdate="20230317T212853Z">
 <seg>Target language not set</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230306T130742Z">
+<tuv xml:lang="es" creationdate="20230317T212853Z">
 <seg>Idioma de destino no establecido</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1743340679-0-1574" creationdate="20230306T130742Z">
-<tuv xml:lang="en" creationdate="20230306T130742Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-1743340679-0-1574" creationdate="20230317T212853Z">
+<tuv xml:lang="en" creationdate="20230317T212853Z">
 <seg>Error exporting TMX: {0}</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230306T130742Z">
+<tuv xml:lang="es" creationdate="20230317T212853Z">
 <seg>Error al exportar TMX: {0}</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1743340679-0-1575" creationdate="20230306T130742Z">
-<tuv xml:lang="en" creationdate="20230306T130742Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-1743340679-0-1575" creationdate="20230317T212853Z">
+<tuv xml:lang="en" creationdate="20230317T212853Z">
 <seg>File is not a Java .properties bundle</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230306T130742Z">
+<tuv xml:lang="es" creationdate="20230317T212853Z">
 <seg>El archivo no es un paquete .properties de Java</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1743340679-0-1576" creationdate="20230306T130742Z">
-<tuv xml:lang="en" creationdate="20230306T130742Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-1743340679-0-1576" creationdate="20230317T212853Z">
+<tuv xml:lang="en" creationdate="20230317T212853Z">
 <seg>Usage:
 
     {0} [-help] -src sourceFolder -xliff xliffFile [-unapproved] [-export]
@@ -208,7 +208,7 @@ Where:
 
 </seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230306T130742Z">
+<tuv xml:lang="es" creationdate="20230317T212853Z">
 <seg>Uso:
 
 {0} [-help] -src carpeta -xliff archivoXliff [-unapproved] [-export]
