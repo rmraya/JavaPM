@@ -10,8 +10,10 @@
 package com.maxprograms.javapm;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 import java.nio.file.Files;
@@ -20,6 +22,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -32,6 +35,7 @@ import com.maxprograms.converters.Utils;
 import com.maxprograms.languages.LanguageUtils;
 import com.maxprograms.xml.Document;
 import com.maxprograms.xml.Element;
+import com.maxprograms.xml.Indenter;
 import com.maxprograms.xml.SAXBuilder;
 import com.maxprograms.xml.XMLOutputter;
 
@@ -48,6 +52,7 @@ public class CreateXliff {
         String tgtLang = "";
         String encoding = "ISO-8859-1";
         boolean xliff2 = false;
+        boolean reuse = false;
 
         for (int i = 0; i < arguments.length; i++) {
             String arg = arguments[i];
@@ -73,6 +78,9 @@ public class CreateXliff {
             if (arg.equals("-2.0")) {
                 xliff2 = true;
             }
+            if (arg.equals("-reuse")) {
+                reuse = true;
+            }
         }
         if (arguments.length < 6) {
             help();
@@ -90,16 +98,19 @@ public class CreateXliff {
             logger.log(Level.ERROR, Messages.getString("CreateXliff.2"));
             return;
         }
-
+        if (reuse && tgtLang.isEmpty()) {
+            logger.log(Level.ERROR, Messages.getString("CreateXliff.10"));
+            return;
+        }
         try {
-            generateXliff(srcFolder, xliff, srcLang, tgtLang, encoding, xliff2);
+            generateXliff(srcFolder, xliff, srcLang, tgtLang, encoding, xliff2, reuse);
         } catch (IOException | SAXException | ParserConfigurationException e) {
             logger.log(Level.ERROR, e.getMessage(), e);
         }
     }
 
     private static void generateXliff(String src, String xliff, String srcLang, String tgtLang, String encoding,
-            boolean xliff2) throws IOException, SAXException, ParserConfigurationException {
+            boolean xliff2, boolean reuse) throws IOException, SAXException, ParserConfigurationException {
         File srcFolder = new File(src);
         if (!srcFolder.exists()) {
             throw new IOException(Messages.getString("CreateXliff.3"));
@@ -150,9 +161,83 @@ public class CreateXliff {
             if (Constants.ERROR.equals(result.get(0))) {
                 throw new IOException(result.get(1));
             }
+            if (reuse) {
+                String name = source.substring(0, source.lastIndexOf('.'));
+                String translations = name + "_" + tgtLang + ".properties";
+                if (new File(translations).exists()) {
+                    recoverTranslations(translations, xlf, xliff2, encoding);
+                }
+            }
             xliffs.add(xlf);
         }
         join(xliffs, src, xliff, srcLang, tgtLang, xliff2);
+    }
+
+    private static void recoverTranslations(String translations, String xlf, boolean xliff2, String encoding)
+            throws IOException, SAXException, ParserConfigurationException {
+        Properties props;
+        try (FileInputStream is = new FileInputStream(new File(translations))) {
+            try (InputStreamReader reader = new InputStreamReader(is, encoding)) {
+                props = new Properties();
+                props.load(reader);
+            }
+        }
+        SAXBuilder builder = new SAXBuilder();
+        Document doc = builder.build(xlf);
+        Element root = doc.getRootElement();
+        if (xliff2) {
+            recoverXliff2(root, props);
+        } else {
+            recoverXliff1(root, props);
+        }
+        Indenter.indent(root, 2);
+        XMLOutputter outputter = new XMLOutputter();
+        outputter.preserveSpace(true);
+        try (FileOutputStream out = new FileOutputStream(xlf)) {
+            outputter.output(doc, out);
+        }
+    }
+
+    private static void recoverXliff1(Element root, Properties props) {
+        Element file = root.getChild("file");
+        Element body = file.getChild("body");
+        List<Element> units = body.getChildren("trans-unit");
+        for (int i = 0; i < units.size(); i++) {
+            Element unit = units.get(i);
+            String resname = unit.getAttributeValue("resname");
+            String target = props.getProperty(resname);
+            if (target != null) {
+                String source = unit.getChild("source").getText();
+                if (!source.equals(target)) {
+                    Element targetElement = new Element("target");
+                    targetElement.setText(target);
+                    unit.addContent(targetElement);
+                    unit.addContent("\n");
+                }
+            }
+        }
+    }
+
+    private static void recoverXliff2(Element root, Properties props) {
+        Element file = root.getChild("file");
+        List<Element> units = file.getChildren("unit");
+        for (int i = 0; i < units.size(); i++) {
+            Element unit = units.get(i);
+            Element metadata = unit.getChild("mda:metadata");
+            Element metaGroup = metadata.getChild("mda:metaGroup");
+            Element meta = metaGroup.getChild("mda:meta");
+            String resname = meta.getText();
+            String target = props.getProperty(resname);
+            if (target != null) {
+                Element segment = unit.getChild("segment");
+                String source = segment.getChild("source").getText();
+                if (!source.equals(target)) {
+                    Element targetElement = new Element("target");
+                    targetElement.setText(target);
+                    segment.addContent(targetElement);
+                }
+            }
+        }
     }
 
     private static void join(List<String> xliffs, String src, String xliff, String srcLang, String tgtLang,

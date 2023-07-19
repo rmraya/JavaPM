@@ -1,6 +1,6 @@
 # JavaPM
 
-<img src="images/Orange_squares.png" alt="javPM icon"/>
+<img src="images/Orange_squares.png" alt="JavaPM icon"/>
 
 ## Java Properties Manager
 
@@ -21,7 +21,7 @@ Running `.\createxliff.bat` or `./createxliff.sh` without parameters displays he
 ```text
 Usage:
 
-    createxliff.bat [-help] -src sourceFolder -xliff xliffFile -srcLang sourceLanguage [-tgtLang targetLanguage] [-2.0]
+    createxliff.bat [-help] -src sourceFolder -xliff xliffFile -srcLang sourceLanguage [-tgtLang targetLanguage] [-reuse] [-2.0]
 
 Where:
 
@@ -31,6 +31,7 @@ Where:
    -srcLang:   source language code
    -enc:       (optional) character set code for .properties files; default: ISO-8859-1
    -tgtLang:   (optional) target language code
+   -reuse:     (optional) reuse existing translations
    -2.0:       (optional) generate XLIFF 2.0
 ```
 
