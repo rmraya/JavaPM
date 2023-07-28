@@ -282,7 +282,7 @@ public class CreateXliff {
         }
     }
 
-    private static void harvestProperties(File folder) throws IOException {
+    private static void harvestProperties(File folder) throws IOException, SAXException, ParserConfigurationException {
         String[] list = folder.list();
         for (int i = 0; i < list.length; i++) {
             String name = list[i];
