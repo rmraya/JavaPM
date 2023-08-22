@@ -1,3 +1,5 @@
 @echo off
 pushd "%~dp0" 
-bin\java.exe --module-path lib -m javapm/com.maxprograms.javapm.MergeXliff %* 
+set OpenXLIFF_HOME=%CD%
+popd
+%OpenXLIFF_HOME%\bin\java.exe --module-path %OpenXLIFF_HOME%\lib -m javapm/com.maxprograms.javapm.MergeXliff %* 
