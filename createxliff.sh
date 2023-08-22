@@ -1,6 +1,6 @@
 #!/bin/bash
 CURRENT=$PWD
 cd `dirname "$0"`
-OpenXLIFF_HOME=$PWD
-bin/java --module-path lib -m javapm/com.maxprograms.javapm.CreateXliff $@
+export OpenXLIFF_HOME=$PWD
 cd $CURRENT
+$OpenXLIFF_HOME/bin/java --module-path $OpenXLIFF_HOME/lib -m javapm/com.maxprograms.javapm.CreateXliff $@
