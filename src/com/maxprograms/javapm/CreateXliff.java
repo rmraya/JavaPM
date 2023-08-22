@@ -90,9 +90,17 @@ public class CreateXliff {
             logger.log(Level.ERROR, Messages.getString("CreateXliff.0"));
             return;
         }
+        File src = new File(srcFolder);
+        if (!src.isAbsolute()) {
+            srcFolder = src.getAbsoluteFile().getAbsolutePath();
+        }
         if (xliff.isEmpty()) {
             logger.log(Level.ERROR, Messages.getString("CreateXliff.1"));
             return;
+        }
+        File xliffFile = new File(xliff);
+        if (!xliffFile.isAbsolute()) {
+            xliff = xliffFile.getAbsoluteFile().getAbsolutePath();
         }
         if (srcLang.isEmpty()) {
             logger.log(Level.ERROR, Messages.getString("CreateXliff.2"));

@@ -68,9 +68,17 @@ public class MergeXliff {
             logger.log(Level.ERROR, Messages.getString("MergeXliff.0"));
             return;
         }
+        File src = new File(srcFolder);
+        if (!src.isAbsolute()) {
+            srcFolder = src.getAbsoluteFile().getAbsolutePath();
+        }
         if (xliff.isEmpty()) {
             logger.log(Level.ERROR, Messages.getString("MergeXliff.1"));
             return;
+        }
+        File xliffFile = new File(xliff);
+        if (!xliffFile.isAbsolute()) {
+            xliff = xliffFile.getAbsoluteFile().getAbsolutePath();
         }
         try {
             mergeXliff(srcFolder, xliff, unapproved, exportTMX);
@@ -134,7 +142,8 @@ public class MergeXliff {
         }
     }
 
-    private static String getTarget(String src, String xliff) throws SAXException, IOException, ParserConfigurationException {
+    private static String getTarget(String src, String xliff)
+            throws SAXException, IOException, ParserConfigurationException {
         SAXBuilder builder = new SAXBuilder();
         Document doc = builder.build(xliff);
         List<Element> files = doc.getRootElement().getChildren("file");
