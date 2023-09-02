@@ -219,8 +219,9 @@ public class CreateXliff {
                 if (!source.equals(target)) {
                     Element targetElement = new Element("target");
                     targetElement.setText(target);
+                    unit.addContent("   ");
                     unit.addContent(targetElement);
-                    unit.addContent("\n");
+                    unit.addContent("\n      ");
                 }
             }
         }
@@ -241,6 +242,7 @@ public class CreateXliff {
                 String source = segment.getChild("source").getText();
                 if (!source.equals(target)) {
                     Element targetElement = new Element("target");
+                    targetElement.setAttribute("xml:space", "preserve");
                     targetElement.setText(target);
                     segment.addContent(targetElement);
                 }

@@ -3,7 +3,7 @@
 <tmx version="1.4">
 <header 
       creationtool="OpenXLIFF" 
-      creationtoolversion="3.10.0" 
+      creationtoolversion="3.13.0" 
       srclang="en" 
       adminlang="en"  
       datatype="xml" 
@@ -12,51 +12,5 @@
 >
 </header>
 <body>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.10.0" tuid="-1743340679-0-57" creationdate="20230719T143420Z">
-<tuv xml:lang="en" creationdate="20230719T143420Z">
-<seg>Usage:
-
-    {0} [-help] -src sourceFolder -xliff xliffFile -srcLang sourceLanguage [-enc characterSet] [-tgtLang targetLanguage] [-reuse] [-2.0]
-
-Where:
-
-   -help:      (optional) display this help information and exit
-   -src:       source code folder
-   -xliff:     XLIFF file to generate
-   -srcLang:   source language code
-   -enc:       (optional) character set code for .properties files; default: ISO-8859-1
-   -tgtLang:   (optional) target language code
-   -reuse:     (optional) reuse existing translations
-   -2.0:       (optional) generate XLIFF 2.0
-
-</seg>
-</tuv>
-<tuv xml:lang="es" creationdate="20230719T143420Z">
-<seg>Uso:
-
-    {0} [-help] -src carpeta -xliff archivoXliff -srcLang idiomaOrigen [-enc characterSet] [-tgtLang idiomaDestino] [-2.0]
-
-Dónde:
-
-    -help:   (opcional) mostrar esta información de ayuda y salir
-    -src:     carpeta de código fuente
-    -xliff:   archivo XLIFF a generar
-    -srcLang: código del idioma origen
-    -enc:     (opcional) código de juego de caracteres  para archivos .properties; valor predeterminado: ISO-8859-1
-    -tgtLang: (opcional) código de idioma de destino
-    -reuse: (opcional) reutilizar traducciones existentes
-    -2.0:    (opcional) generar XLIFF 2.0
-
-</seg>
-</tuv>
-</tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.10.0" tuid="-1743340679-0-1567" creationdate="20230719T143420Z">
-<tuv xml:lang="en" creationdate="20230719T143420Z">
-<seg>Cannot reuse translations if 'tgtLang' is not set</seg>
-</tuv>
-<tuv xml:lang="es" creationdate="20230719T143420Z">
-<seg>No se pueden reutilizar las traducciones si 'tgtLang' no está definido</seg>
-</tuv>
-</tu>
 </body>
 </tmx>

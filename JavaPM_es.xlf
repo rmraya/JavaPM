@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en" original="com/maxprograms/javapm/javapm.properties" datatype="javapropertyresourcebundle" target-language="es" tool-id="OpenXLIFF">
+<file source-language="en" original="com/maxprograms/javapm/javapm.properties" datatype="javapropertyresourcebundle" target-language="es" tool-id="OpenXLIFF">
     <header>
       <skl>
         <internal-file form="base64">Q3JlYXRlWGxpZmYuMD0lJSUwJSUlCkNyZWF0ZVhsaWZmLjE9JSUlMSUlJQpDcmVhdGVYbGlmZi4y
@@ -13,47 +13,47 @@ LjQ9JSUlMTUlJSUKTWVyZ2VYbGlmZi41PSUlJTE2JSUlCk1lcmdlWGxpZmYuNj0lJSUxNyUlJQpN
 ZXJnZVhsaWZmLjc9JSUlMTglJSUKTWVyZ2VYbGlmZi44PSUlJTE5JSUlCk1lcmdlWGxpZmYuOT0l
 JSUyMCUlJQo=</internal-file>
       </skl>
-      <tool tool-version="3.10.0 20230719_1041" tool-id="OpenXLIFF" tool-name="OpenXLIFF Filters"/>
+      <tool tool-version="3.13.0 20230829_0823" tool-id="OpenXLIFF" tool-name="OpenXLIFF Filters"/>
     </header>
-    <?encoding utf-8?>
+    <?encoding UTF-8?>
     <body>
       <trans-unit resname="CreateXliff.0" approved="no" xml:space="preserve" id="0">
       <source>Missing '-src' parameter</source>
-   <target>Falta el parámetro '-src'</target>
-</trans-unit>
+      <target>Falta el parámetro '-src'</target>
+      </trans-unit>
       <trans-unit resname="CreateXliff.1" approved="no" xml:space="preserve" id="1">
       <source>Missing '-xliff' parameter</source>
-   <target>Falta el parámetro '-xliff'</target>
-</trans-unit>
+      <target>Falta el parámetro '-xliff'</target>
+      </trans-unit>
       <trans-unit resname="CreateXliff.2" approved="no" xml:space="preserve" id="2">
       <source>Missing '-srcLang' parameter</source>
-   <target>Falta el parámetro '-srcLang'</target>
-</trans-unit>
+      <target>Falta el parámetro '-srcLang'</target>
+      </trans-unit>
       <trans-unit resname="CreateXliff.3" approved="no" xml:space="preserve" id="3">
       <source>'src' folder does not exist</source>
-   <target>La carpeta 'src' no existe</target>
-</trans-unit>
+      <target>La carpeta 'src' no existe</target>
+      </trans-unit>
       <trans-unit resname="CreateXliff.4" approved="no" xml:space="preserve" id="4">
       <source>'catalog' folder not found</source>
-   <target>No se encontró la carpeta 'catalog'</target>
-</trans-unit>
+      <target>No se encontró la carpeta 'catalog'</target>
+      </trans-unit>
       <trans-unit resname="CreateXliff.5" approved="no" xml:space="preserve" id="5">
       <source>Catalog file does not exist</source>
-   <target>El archivo de catálogo no existe</target>
-</trans-unit>
+      <target>El archivo de catálogo no existe</target>
+      </trans-unit>
       <trans-unit resname="CreateXliff.6" approved="no" xml:space="preserve" id="6">
       <source>'srx' folder not found</source>
-   <target>No se encontró la carpeta 'srx'</target>
-</trans-unit>
+      <target>No se encontró la carpeta 'srx'</target>
+      </trans-unit>
       <trans-unit resname="CreateXliff.7" approved="no" xml:space="preserve" id="7">
       <source>SRX file does not exist</source>
-   <target>El archivo SRX no existe</target>
-</trans-unit>
+      <target>El archivo SRX no existe</target>
+      </trans-unit>
       <trans-unit resname="CreateXliff.8" approved="no" xml:space="preserve" id="8">
       <source>There are no '.properties' files to process</source>
-   <target>No hay archivos '.properties' para procesar</target>
-</trans-unit>
-      <trans-unit resname="CreateXliff.9" approved="yes" xml:space="preserve" id="9">
+      <target>No hay archivos '.properties' para procesar</target>
+      </trans-unit>
+      <trans-unit resname="CreateXliff.9" approved="no" xml:space="preserve" id="9">
       <source>Usage:
 
     {0} [-help] -src sourceFolder -xliff xliffFile -srcLang sourceLanguage [-enc characterSet] [-tgtLang targetLanguage] [-reuse] [-2.0]
@@ -70,63 +70,63 @@ Where:
    -2.0:       (optional) generate XLIFF 2.0
 
 </source>
-   <target>Uso:
+      <target>Uso:
 
     {0} [-help] -src carpeta -xliff archivoXliff -srcLang idiomaOrigen [-enc characterSet] [-tgtLang idiomaDestino] [-2.0]
 
 Dónde:
 
-    -help:   (opcional) mostrar esta información de ayuda y salir
+    -help:    (opcional) mostrar esta información de ayuda y salir
     -src:     carpeta de código fuente
     -xliff:   archivo XLIFF a generar
     -srcLang: código del idioma origen
     -enc:     (opcional) código de juego de caracteres  para archivos .properties; valor predeterminado: ISO-8859-1
     -tgtLang: (opcional) código de idioma de destino
-    -reuse: (opcional) reutilizar traducciones existentes
-    -2.0:    (opcional) generar XLIFF 2.0
+    -reuse:   (opcional) reutilizar traducciones existentes
+    -2.0:     (opcional) generar XLIFF 2.0
 
 </target>
-</trans-unit>
-      <trans-unit resname="CreateXliff.10" approved="yes" xml:space="preserve" id="10">
+      </trans-unit>
+      <trans-unit resname="CreateXliff.10" approved="no" xml:space="preserve" id="10">
       <source>Cannot reuse translations if 'tgtLang' is not set</source>
       <target>No se pueden reutilizar las traducciones si 'tgtLang' no está definido</target>
-   </trans-unit>
+      </trans-unit>
       <trans-unit resname="MergeXliff.0" approved="no" xml:space="preserve" id="11">
       <source>Missing '-src' parameter</source>
-   <target>Falta el parámetro '-src'</target>
-</trans-unit>
+      <target>Falta el parámetro '-src'</target>
+      </trans-unit>
       <trans-unit resname="MergeXliff.1" approved="no" xml:space="preserve" id="12">
       <source>Missing '-xliff' parameter</source>
-   <target>Falta el parámetro '-xliff'</target>
-</trans-unit>
+      <target>Falta el parámetro '-xliff'</target>
+      </trans-unit>
       <trans-unit resname="MergeXliff.2" approved="no" xml:space="preserve" id="13">
       <source>'catalog' folder not found</source>
-   <target>No se encontró la carpeta 'catalog'</target>
-</trans-unit>
+      <target>No se encontró la carpeta 'catalog'</target>
+      </trans-unit>
       <trans-unit resname="MergeXliff.3" approved="no" xml:space="preserve" id="14">
       <source>Catalog file does not exist</source>
-   <target>El archivo de catálogo no existe</target>
-</trans-unit>
+      <target>El archivo de catálogo no existe</target>
+      </trans-unit>
       <trans-unit resname="MergeXliff.4" approved="no" xml:space="preserve" id="15">
       <source>'xliff' file does not exist</source>
-   <target>El archivo 'xliff' no existe</target>
-</trans-unit>
+      <target>El archivo 'xliff' no existe</target>
+      </trans-unit>
       <trans-unit resname="MergeXliff.5" approved="no" xml:space="preserve" id="16">
       <source>Selected file is not an XLIFF document</source>
-   <target>El archivo seleccionado no es un documento XLIFF</target>
-</trans-unit>
+      <target>El archivo seleccionado no es un documento XLIFF</target>
+      </trans-unit>
       <trans-unit resname="MergeXliff.6" approved="no" xml:space="preserve" id="17">
       <source>Target language not set</source>
-   <target>Idioma de destino no establecido</target>
-</trans-unit>
+      <target>Idioma de destino no establecido</target>
+      </trans-unit>
       <trans-unit resname="MergeXliff.7" approved="no" xml:space="preserve" id="18">
       <source>Error exporting TMX: {0}</source>
-   <target>Error al exportar TMX: {0}</target>
-</trans-unit>
+      <target>Error al exportar TMX: {0}</target>
+      </trans-unit>
       <trans-unit resname="MergeXliff.8" approved="no" xml:space="preserve" id="19">
       <source>File is not a Java .properties bundle</source>
-   <target>El archivo no es un paquete .properties de Java</target>
-</trans-unit>
+      <target>El archivo no es un paquete .properties de Java</target>
+      </trans-unit>
       <trans-unit resname="MergeXliff.9" approved="no" xml:space="preserve" id="20">
       <source>Usage:
 
@@ -141,7 +141,7 @@ Where:
     -export:     (optional) generate TMX file from approved segments
 
 </source>
-   <target>Uso:
+      <target>Uso:
 
 {0} [-help] -src carpeta -xliff archivoXliff [-unapproved] [-export]
 
@@ -154,7 +154,6 @@ Dónde:
     -export:     (opcional) generar archivo TMX a partir de segmentos aprobados
 
 </target>
-</trans-unit>
+      </trans-unit>
     </body>
-  </file>
-</xliff>
+  </file></xliff>
