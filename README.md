@@ -1,6 +1,6 @@
 # JavaPM
 
-<img src="images/Orange_squares.png" alt="JavaPM icon"/>
+![JavaPM icon](images/Orange_squares.png)
 
 ## Java Properties Manager
 
