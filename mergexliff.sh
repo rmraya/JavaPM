@@ -1,7 +1,7 @@
 #!/bin/bash
 CURRENT=$PWD
 cd `dirname "$0"`
-export OpenXLIFF_HOME=$PWD
+export JavaPM_HOME=$PWD
 cd $CURRENT
-$OpenXLIFF_HOME/bin/java --module-path $OpenXLIFF_HOME/lib -m javapm/com.maxprograms.javapm.MergeXliff $@
+$JavaPM_HOME/bin/java --module-path $JavaPM_HOME/lib -m javapm/com.maxprograms.javapm.MergeXliff $@
 

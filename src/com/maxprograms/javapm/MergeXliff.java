@@ -93,7 +93,12 @@ public class MergeXliff {
         if (!srcFolder.exists()) {
             Files.createDirectories(srcFolder.toPath());
         }
-        File catalogFolder = new File("catalog");
+        String home = System.getenv().get("JavaPM_HOME");
+        if (home == null) {
+            home = System.getProperty("user.dir");
+        }
+        File homeFolder = new File(home);
+        File catalogFolder = new File(homeFolder, "catalog");
         if (!catalogFolder.exists()) {
             throw new IOException(Messages.getString("MergeXliff.2"));
         }

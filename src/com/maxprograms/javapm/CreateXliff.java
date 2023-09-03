@@ -102,6 +102,9 @@ public class CreateXliff {
         if (!xliffFile.isAbsolute()) {
             xliff = xliffFile.getAbsoluteFile().getAbsolutePath();
         }
+        if (!xliffFile.getParentFile().exists()) {
+            xliffFile.getParentFile().mkdirs();
+        }
         if (srcLang.isEmpty()) {
             logger.log(Level.ERROR, Messages.getString("CreateXliff.2"));
             return;
@@ -123,7 +126,12 @@ public class CreateXliff {
         if (!srcFolder.exists()) {
             throw new IOException(Messages.getString("CreateXliff.3"));
         }
-        File catalogFolder = new File("catalog");
+        String home = System.getenv().get("JavaPM_HOME");
+        if (home == null) {
+            home = System.getProperty("user.dir");
+        }
+        File homeFolder = new File(home);
+        File catalogFolder = new File(homeFolder, "catalog");
         if (!catalogFolder.exists()) {
             throw new IOException(Messages.getString("CreateXliff.4"));
         }
@@ -131,7 +139,7 @@ public class CreateXliff {
         if (!catalog.exists()) {
             throw new IOException(Messages.getString("CreateXliff.5"));
         }
-        File srxFolder = new File("srx");
+        File srxFolder = new File(homeFolder, "srx");
         if (!srxFolder.exists()) {
             throw new IOException(Messages.getString("CreateXliff.6"));
         }

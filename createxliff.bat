@@ -1,5 +1,5 @@
 @echo off
 pushd "%~dp0" 
-set OpenXLIFF_HOME=%CD%
+set JavaPM_HOME=%CD%
 popd
-%OpenXLIFF_HOME%\bin\java.exe --module-path %OpenXLIFF_HOME%\lib -m javapm/com.maxprograms.javapm.CreateXliff %* 
+%JavaPM_HOME%\bin\java.exe --module-path %JavaPM_HOME%\lib -m javapm/com.maxprograms.javapm.CreateXliff %* 
